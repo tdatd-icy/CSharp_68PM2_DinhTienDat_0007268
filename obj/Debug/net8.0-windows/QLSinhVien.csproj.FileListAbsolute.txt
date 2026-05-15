@@ -14,3 +14,5 @@ C:\Users\Lenovo\OneDrive\Documents\Tài liệu\QLSinhVien\obj\Debug\net8.0-windo
 C:\Users\Lenovo\OneDrive\Documents\Tài liệu\QLSinhVien\obj\Debug\net8.0-windows\QLSinhVien.pdb
 C:\Users\Lenovo\OneDrive\Documents\Tài liệu\QLSinhVien\obj\Debug\net8.0-windows\QLSinhVien.genruntimeconfig.cache
 C:\Users\Lenovo\OneDrive\Documents\Tài liệu\QLSinhVien\obj\Debug\net8.0-windows\ref\QLSinhVien.dll
+C:\Users\Lenovo\OneDrive\Documents\Tài liệu\QLSinhVien\obj\Debug\net8.0-windows\QLSinhVien.Form2.resources
+C:\Users\Lenovo\OneDrive\Documents\Tài liệu\QLSinhVien\obj\Debug\net8.0-windows\QLSinhVien.sourcelink.json
