@@ -22,5 +22,11 @@ namespace QLSinhVien
             dgvSinhVien.Rows.Add("001", "Đinh Tiến Đạt", "68PM2");
             dgvSinhVien.Rows.Add("002", "Nguyễn Văn A", "68PM1");
         }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }
