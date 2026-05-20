@@ -1,6 +1,6 @@
 ﻿namespace QLSinhVien
 {
-    partial class QDQLLH
+    partial class GDQLLH
     {
         /// <summary> 
         /// Required designer variable.

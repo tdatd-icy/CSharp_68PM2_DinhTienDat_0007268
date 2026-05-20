@@ -24,14 +24,14 @@ namespace QLSinhVien
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            QDQLSV uCQLSV = new QDQLSV();
+            GDQLSV uCQLSV = new GDQLSV();
             panel_main.Controls.Clear();
             panel_main.Controls.Add(uCQLSV);
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            QDQLLH uCQLLH = new QDQLLH();
+            GDQLLH uCQLLH = new GDQLLH();
             panel_main.Controls.Clear();
             panel_main.Controls.Add(uCQLLH);
         }

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace QLSinhVien
 {
-    public partial class QDQLSV : UserControl
+    public partial class GDQLLH : UserControl
     {
-        public QDQLSV()
+        public GDQLLH()
         {
             InitializeComponent();
+        }
+
+        private void UCQLLH_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -22,7 +27,12 @@ namespace QLSinhVien
 
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
         {
 
         }
