@@ -7,5 +7,14 @@
     <Compile Update="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Form_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QDQLLH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="QDQLSV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

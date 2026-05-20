@@ -10,19 +10,24 @@ using System.Windows.Forms;
 
 namespace QLSinhVien
 {
-    public partial class Form2 : Form
+    public partial class QDQLSV : UserControl
     {
-        public Form2()
+        public QDQLSV()
         {
             InitializeComponent();
         }
 
-        private void lbPage_Click(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void dgvSinhVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

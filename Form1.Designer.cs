@@ -41,34 +41,31 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(100, 103);
+            label1.Location = new Point(268, 103);
             label1.Name = "label1";
             label1.Size = new Size(186, 25);
             label1.TabIndex = 0;
             label1.Text = "Tên đăng nhập (email)";
-            label1.Click += label1_Click;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(100, 131);
+            txtEmail.Location = new Point(268, 131);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(261, 31);
             txtEmail.TabIndex = 1;
-            txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(100, 186);
+            label2.Location = new Point(268, 183);
             label2.Name = "label2";
             label2.Size = new Size(86, 25);
             label2.TabIndex = 2;
             label2.Text = "Mật khẩu";
-            label2.Click += label2_Click;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(100, 214);
+            txtPassword.Location = new Point(268, 211);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(261, 31);
@@ -77,7 +74,7 @@
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(100, 273);
+            btnLogin.Location = new Point(336, 267);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(118, 37);
             btnLogin.TabIndex = 4;
