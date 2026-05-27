@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\source\\repos\\CSharp_68PM2_DinhTienDat_0007268\\QLSinhVien\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7EA152EB-E6AD-4421-8235-0AF522802D1A}|QLSV.csproj|c:\\users\\lenovo\\source\\repos\\csharp_68pm2_dinhtiendat_0007268\\qlsinhvien\\qlsinhvien.sln||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7EA152EB-E6AD-4421-8235-0AF522802D1A}|QLSV.csproj|solutionrelative:qlsinhvien.sln||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QLSinhVien.sln",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\CSharp_68PM2_DinhTienDat_0007268\\QLSinhVien\\QLSinhVien.sln",
+              "RelativeDocumentMoniker": "QLSinhVien.sln",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\CSharp_68PM2_DinhTienDat_0007268\\QLSinhVien\\QLSinhVien.sln",
+              "RelativeToolTip": "QLSinhVien.sln",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002855|",
+              "WhenOpened": "2026-05-27T17:02:22.549Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

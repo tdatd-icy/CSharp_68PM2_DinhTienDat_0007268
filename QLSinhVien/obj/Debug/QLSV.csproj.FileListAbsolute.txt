@@ -1,0 +1,15 @@
+C:\Users\Lenovo\source\repos\CSharp_68PM2_DinhTienDat_0007268\QLSinhVien\obj\Debug\QLSV.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\CSharp_68PM2_DinhTienDat_0007268\QLSinhVien\obj\Debug\QLSV.UCQLLH.resources
+C:\Users\Lenovo\source\repos\CSharp_68PM2_DinhTienDat_0007268\QLSinhVien\obj\Debug\QLSV.UCQLSV.resources
+C:\Users\Lenovo\source\repos\CSharp_68PM2_DinhTienDat_0007268\QLSinhVien\obj\Debug\QLSV.Form_main.resources
+C:\Users\Lenovo\source\repos\CSharp_68PM2_DinhTienDat_0007268\QLSinhVien\obj\Debug\QLSV.Properties.Resources.resources
+C:\Users\Lenovo\source\repos\CSharp_68PM2_DinhTienDat_0007268\QLSinhVien\obj\Debug\QLSV.csproj.GenerateResource.cache
+C:\Users\Lenovo\source\repos\CSharp_68PM2_DinhTienDat_0007268\QLSinhVien\obj\Debug\QLSV.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\CSharp_68PM2_DinhTienDat_0007268\QLSinhVien\obj\Debug\Windowform_App.Form1.resources
+C:\Users\Lenovo\source\repos\CSharp_68PM2_DinhTienDat_0007268\QLSinhVien\obj\Debug\Windowform_App.Form2.resources
+C:\Users\Lenovo\source\repos\CSharp_68PM2_DinhTienDat_0007268\QLSinhVien\bin\Debug\QLSV.exe.config
+C:\Users\Lenovo\source\repos\CSharp_68PM2_DinhTienDat_0007268\QLSinhVien\bin\Debug\QLSV.exe
+C:\Users\Lenovo\source\repos\CSharp_68PM2_DinhTienDat_0007268\QLSinhVien\bin\Debug\QLSV.pdb
+C:\Users\Lenovo\source\repos\CSharp_68PM2_DinhTienDat_0007268\QLSinhVien\obj\Debug\QLSV.exe
+C:\Users\Lenovo\source\repos\CSharp_68PM2_DinhTienDat_0007268\QLSinhVien\obj\Debug\QLSV.pdb
+C:\Users\Lenovo\source\repos\CSharp_68PM2_DinhTienDat_0007268\QLSinhVien\obj\Debug\QLSV.exe.config
