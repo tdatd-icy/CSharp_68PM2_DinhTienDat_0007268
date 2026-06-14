@@ -348,35 +348,35 @@ namespace QLSV
             // colMaSV
             // 
             this.colMaSV.HeaderText = "Mã SV";
-            this.colMaSV.MinimumWidth = 10;
+            this.colMaSV.MinimumWidth = 20;
             this.colMaSV.Name = "colMaSV";
             this.colMaSV.ReadOnly = true;
             // 
             // colHoTen
             // 
             this.colHoTen.HeaderText = "Họ và Tên";
-            this.colHoTen.MinimumWidth = 10;
+            this.colHoTen.MinimumWidth =20;
             this.colHoTen.Name = "colHoTen";
             this.colHoTen.ReadOnly = true;
             // 
             // colGioiTinh
             // 
             this.colGioiTinh.HeaderText = "Giới Tính";
-            this.colGioiTinh.MinimumWidth = 10;
+            this.colGioiTinh.MinimumWidth = 20;
             this.colGioiTinh.Name = "colGioiTinh";
             this.colGioiTinh.ReadOnly = true;
             // 
             // colNgaySinh
             // 
             this.colNgaySinh.HeaderText = "Ngày Sinh";
-            this.colNgaySinh.MinimumWidth = 10;
+            this.colNgaySinh.MinimumWidth = 20;
             this.colNgaySinh.Name = "colNgaySinh";
             this.colNgaySinh.ReadOnly = true;
             // 
             // colLop
             // 
             this.colLop.HeaderText = "Lớp";
-            this.colLop.MinimumWidth = 10;
+            this.colLop.MinimumWidth = 20;
             this.colLop.Name = "colLop";
             this.colLop.ReadOnly = true;
             // 

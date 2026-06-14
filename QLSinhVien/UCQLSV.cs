@@ -137,7 +137,7 @@ namespace QLSV
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-
+            btn_add_Click(sender, e);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -175,6 +175,68 @@ namespace QLSV
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string mssv = tb_mssv.Text.Trim();
+
+                if (string.IsNullOrEmpty(mssv))
+                {
+                    MessageBox.Show("Vui lòng chọn sinh viên cần xóa!");
+                    return;
+                }
+
+                DialogResult result = MessageBox.Show(
+                    "Bạn có chắc muốn xóa sinh viên có MSSV: " + mssv + " ?",
+                    "Xác nhận xóa",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (result == DialogResult.No)
+                    return;
+
+                DatabaseDataContext db = new DatabaseDataContext();
+
+                tbl_sinhvien sv = db.tbl_sinhviens
+                                   .SingleOrDefault(x => x.mssv == mssv);
+
+                if (sv == null)
+                {
+                    MessageBox.Show("Không tìm thấy sinh viên!");
+                    return;
+                }
+
+                db.tbl_sinhviens.DeleteOnSubmit(sv);
+
+                db.SubmitChanges();
+
+                MessageBox.Show(
+                    "Đã xóa thành công sinh viên: " + mssv,
+                    "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+
+                LoadData();
+
+                // Xóa dữ liệu trên form
+                tb_mssv.Clear();
+                tb_hoten.Clear();
+                cb_gioitinh.SelectedIndex = -1;
+                cb_lop.SelectedIndex = -1;
+                date.Value = DateTime.Now;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        private void dgvSinhVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
