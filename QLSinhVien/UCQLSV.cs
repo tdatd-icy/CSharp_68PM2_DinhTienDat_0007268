@@ -31,8 +31,7 @@ namespace QLSV
         private void LoadData()
         {
             DatabaseDataContext db = new DatabaseDataContext();
-
-            dataGridView2.DataSource = db.tbl_sinhviens.ToList();
+            dgvSinhVien.DataSource = db.tbl_sinhviens.ToList();
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -87,7 +86,39 @@ namespace QLSV
 
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            DataGridViewRow row = dgvSinhVien.Rows[e.RowIndex];
+
+            tb_mssv.Text = row.Cells["mssv"].Value?.ToString() ?? "";
+            tb_hoten.Text = row.Cells["hoten"].Value?.ToString() ?? "";
+            cb_gioitinh.Text = row.Cells["gioitinh"].Value?.ToString() ?? "";
+            cb_lop.Text = row.Cells["malop"].Value?.ToString() ?? "";
+
+            if (DateTime.TryParse(row.Cells["ngaysinh"].Value?.ToString(), out DateTime ns))
+                date.Value = ns;
+            else
+                date.Value = DateTime.Now;
+        }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dvgSinhVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
 
         }

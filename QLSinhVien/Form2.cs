@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Windowform_App
+namespace QLSV
 {
     public partial class Form2 : Form
     {
@@ -18,6 +18,16 @@ namespace Windowform_App
         }
 
         private void lbPage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
 
         }
