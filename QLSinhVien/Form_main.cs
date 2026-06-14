@@ -33,5 +33,10 @@ namespace QLSV
 
             panel_main.Controls.Add(uc);
         }
+
+        private void panel_main_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
