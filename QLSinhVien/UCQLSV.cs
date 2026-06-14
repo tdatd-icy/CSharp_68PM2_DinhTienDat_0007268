@@ -31,7 +31,20 @@ namespace QLSV
         private void LoadData()
         {
             DatabaseDataContext db = new DatabaseDataContext();
-            dgvSinhVien.DataSource = db.tbl_sinhviens.ToList();
+
+            var data = from sv in db.tbl_sinhviens
+                       join lop in db.tbl_lophocs on sv.malop equals lop.malop
+                       select new
+                       {
+                           sv.mssv,
+                           sv.hoten,
+                           sv.gioitinh,
+                           sv.ngaysinh,
+                           MaLop = sv.malop,
+                           TenLop = lop.tenlophoc
+                       };
+
+            dgvSinhVien.DataSource = data.ToList();
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -95,7 +108,11 @@ namespace QLSV
             tb_mssv.Text = row.Cells["mssv"].Value?.ToString() ?? "";
             tb_hoten.Text = row.Cells["hoten"].Value?.ToString() ?? "";
             cb_gioitinh.Text = row.Cells["gioitinh"].Value?.ToString() ?? "";
-            cb_lop.Text = row.Cells["malop"].Value?.ToString() ?? "";
+
+            if (row.Cells["MaLop"].Value != null)
+                cb_lop.SelectedValue = row.Cells["MaLop"].Value.ToString();
+            else
+                cb_lop.SelectedIndex = -1;
 
             if (DateTime.TryParse(row.Cells["ngaysinh"].Value?.ToString(), out DateTime ns))
                 date.Value = ns;
@@ -121,6 +138,43 @@ namespace QLSV
         private void btnThem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string mssv = tb_mssv.Text.Trim();
+
+                if (string.IsNullOrEmpty(mssv))
+                {
+                    MessageBox.Show("Vui lòng chọn sinh viên cần cập nhật!");
+                    return;
+                }
+
+                DatabaseDataContext db = new DatabaseDataContext();
+                tbl_sinhvien sv = db.tbl_sinhviens.SingleOrDefault(x => x.mssv == mssv);
+
+                if (sv == null)
+                {
+                    MessageBox.Show("Không tìm thấy sinh viên có mã này!");
+                    return;
+                }
+
+                sv.hoten = tb_hoten.Text.Trim();
+                sv.ngaysinh = date.Value;
+                sv.gioitinh = cb_gioitinh.Text.Trim();
+                sv.malop = cb_lop.SelectedValue.ToString();
+
+                db.SubmitChanges();
+                LoadData();
+
+                MessageBox.Show("Cập nhật sinh viên thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

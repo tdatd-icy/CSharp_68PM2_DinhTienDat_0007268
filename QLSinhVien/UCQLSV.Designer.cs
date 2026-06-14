@@ -154,6 +154,7 @@
             this.btnSua.TabIndex = 11;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -237,28 +238,31 @@
             // 
             // dgvSinhVien
             // 
+            this.dgvSinhVien.AllowUserToAddRows = false;
+            this.dgvSinhVien.AllowUserToDeleteRows = false;
             this.dgvSinhVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSinhVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvSinhVien.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvSinhVien.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSinhVien.Location = new System.Drawing.Point(553, 84);
-            this.dgvSinhVien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvSinhVien.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSinhVien.Name = "dgvSinhVien";
             this.dgvSinhVien.ReadOnly = true;
-            this.dgvSinhVien.RowHeadersWidth = 51;
+            this.dgvSinhVien.RowHeadersVisible = false;
+            this.dgvSinhVien.RowHeadersWidth = 82;
             this.dgvSinhVien.RowTemplate.Height = 24;
             this.dgvSinhVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSinhVien.Size = new System.Drawing.Size(785, 507);
-            this.dgvSinhVien.TabIndex = 2;
+            this.dgvSinhVien.TabIndex = 16;
             this.dgvSinhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSinhVien_CellClick);
             this.dgvSinhVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSinhVien_CellClick);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(558, 56);
+            this.label6.Location = new System.Drawing.Point(558, 53);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(174, 20);
             this.label6.TabIndex = 3;
@@ -266,7 +270,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(738, 53);
+            this.textBox6.Location = new System.Drawing.Point(738, 50);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(388, 26);
@@ -274,10 +278,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1141, 50);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(1144, 48);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 29);
+            this.button1.Size = new System.Drawing.Size(141, 30);
             this.button1.TabIndex = 8;
             this.button1.Text = "Tìm kiếm";
             this.button1.UseVisualStyleBackColor = true;
