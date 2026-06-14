@@ -138,6 +138,7 @@
             this.btnLamMoi.Size = new System.Drawing.Size(170, 46);
             this.btnLamMoi.TabIndex = 10;
             this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             this.btnLamMoi.UseVisualStyleBackColor = false;
             // 
             // btnXoa

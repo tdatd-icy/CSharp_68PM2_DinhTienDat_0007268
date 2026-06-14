@@ -233,6 +233,18 @@ namespace QLSV
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            tb_mssv.Clear();
+            tb_hoten.Clear();
+
+            cb_gioitinh.SelectedIndex = -1;
+            cb_lop.SelectedIndex = -1;
+
+            date.Value = DateTime.Now;
+
+            tb_mssv.Focus();
+        }
 
         private void dgvSinhVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
