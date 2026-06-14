@@ -1,11 +1,16 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QLSV
 {
     public partial class UCQLSV : UserControl
     {
+        private int totalPage;
+        private int currentPage = 1;
+        private int pageSize = 10; 
+        private string searchKeyword = "";
         public UCQLSV()
         {
             InitializeComponent();
@@ -32,19 +37,43 @@ namespace QLSV
         {
             DatabaseDataContext db = new DatabaseDataContext();
 
-            var data = from sv in db.tbl_sinhviens
-                       join lop in db.tbl_lophocs on sv.malop equals lop.malop
-                       select new
-                       {
-                           sv.mssv,
-                           sv.hoten,
-                           sv.gioitinh,
-                           sv.ngaysinh,
-                           MaLop = sv.malop,
-                           TenLop = lop.tenlophoc
-                       };
+            var query = from sv in db.tbl_sinhviens
+                        join lop in db.tbl_lophocs
+                        on sv.malop equals lop.malop
+                        select new
+                        {
+                            sv.mssv,
+                            sv.hoten,
+                            sv.gioitinh,
+                            sv.ngaysinh,
+                            MaLop = sv.malop,
+                            TenLop = lop.tenlophoc
+                        };
 
-            dgvSinhVien.DataSource = data.ToList();
+            if (!string.IsNullOrEmpty(searchKeyword))
+            {
+                query = query.Where(x =>
+                    x.mssv.ToLower().Contains(searchKeyword) ||
+                    x.hoten.ToLower().Contains(searchKeyword) ||
+                    x.TenLop.ToLower().Contains(searchKeyword));
+            }
+
+            int totalRecord = query.Count();
+
+            totalPage = (int)Math.Ceiling((double)totalRecord / pageSize);
+
+            if (totalPage == 0)
+                totalPage = 1;
+
+            if (currentPage > totalPage)
+                currentPage = totalPage;
+
+            dgvSinhVien.DataSource = query
+                .Skip((currentPage - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            label7.Text = $"Trang {currentPage}/{totalPage}";
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -241,11 +270,49 @@ namespace QLSV
             cb_gioitinh.SelectedIndex = -1;
             cb_lop.SelectedIndex = -1;
 
+            txtTimKiem.Clear();
+
+            searchKeyword = "";
+            currentPage = 1;
+
             date.Value = DateTime.Now;
 
-            tb_mssv.Focus();
+            LoadData();
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            searchKeyword = txtTimKiem.Text.Trim().ToLower();
 
+            currentPage = 1;
+
+            LoadData();
+        }
+        private void button7_Click(object sender, EventArgs e)
+        {
+            currentPage = 1;
+            LoadData();
+        }
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (currentPage > 1)
+            {
+                currentPage--;
+                LoadData();
+            }
+        }
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (currentPage < totalPage)
+            {
+                currentPage++;
+                LoadData();
+            }
+        }
+        private void button9_Click(object sender, EventArgs e)
+        {
+            currentPage = totalPage;
+            LoadData();
+        }
         private void dgvSinhVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

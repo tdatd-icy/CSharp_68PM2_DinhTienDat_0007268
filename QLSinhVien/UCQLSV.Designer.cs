@@ -47,8 +47,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dgvSinhVien = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -138,8 +138,8 @@
             this.btnLamMoi.Size = new System.Drawing.Size(170, 46);
             this.btnLamMoi.TabIndex = 10;
             this.btnLamMoi.Text = "Làm mới";
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnXoa
             // 
@@ -289,30 +289,31 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Tìm kiếm theo tên/mssv";
             // 
-            // textBox6
+            // txtTimKiem
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Location = new System.Drawing.Point(640, 24);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(410, 26);
-            this.textBox6.TabIndex = 15;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.txtTimKiem.Location = new System.Drawing.Point(640, 24);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(410, 26);
+            this.txtTimKiem.TabIndex = 15;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // button1
+            // btnTimKiem
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1080, 21);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 32);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Tìm kiếm";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTimKiem.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.Location = new System.Drawing.Point(1080, 21);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(110, 32);
+            this.btnTimKiem.TabIndex = 16;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.Click += new System.EventHandler(this.button1_Click);
+            this.btnTimKiem.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
@@ -324,6 +325,7 @@
             this.button6.TabIndex = 17;
             this.button6.Text = "<<";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -335,6 +337,7 @@
             this.button7.TabIndex = 18;
             this.button7.Text = "<";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -346,6 +349,7 @@
             this.button8.TabIndex = 19;
             this.button8.Text = ">";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -357,6 +361,7 @@
             this.button9.TabIndex = 20;
             this.button9.Text = ">>";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // label7
             // 
@@ -378,8 +383,8 @@
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.btnTimKiem);
+            this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvSinhVien);
             this.Controls.Add(this.groupBox1);
@@ -408,12 +413,12 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridView dgvSinhVien;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
